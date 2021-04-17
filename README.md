@@ -1,4 +1,4 @@
-# Project Description (Part-2)
+# Project Description (Assignment Part-2)
 This project is a homework assignment to setup a Bootstrap HTML template using Flask templates and use it to display data retrieved from database.
 
 ### Screenshot  for Webpage
