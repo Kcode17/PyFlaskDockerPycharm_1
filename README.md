@@ -1,6 +1,6 @@
 # Project Description (Assignment Part-3)
-This project is a homework assignment to In this project you will need to create HTML forms to create new records, update records, and a small form that 
-has no fields other than a submit button to delete records.
+This project is a homework assignment to create HTML forms to create new records, update records, and a small form that 
+has no fields other than a delete button to delete records.
 
 I chose to use Baseball Player Information database for the new application
 
