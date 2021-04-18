@@ -17,6 +17,7 @@ I chose to use Baseball Player Information database for the new application
 ![postman](screenshots/New_Player_Added.PNG)
 
 ### Screenshot for updated record added to homepage
+Adam Donachie Name update to Adam Donachie_1
 ![postman](screenshots/Name_updated.PNG)
 
 ### Screenshot for deleted record (New_Player_Teja) from homepage
