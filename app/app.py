@@ -34,9 +34,9 @@ def record_view(player_id):
 
 
 @app.route('/edit/<int:player_id>', methods=['GET'])
-def form_edit_get(city_id):
+def form_edit_get(player_id):
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblBaseball_Players WHERE id=%s', city_id)
+    cursor.execute('SELECT * FROM tblBaseball_Players WHERE id=%s', player_id)
     result = cursor.fetchall()
     return render_template('edit.html', title='Edit Form', player=result[0])
 
@@ -105,7 +105,7 @@ def api_add() -> str:
 
 
 @app.route('/api/v1/cities/<int:player_id>', methods=['PUT'])
-def api_edit(city_id) -> str:
+def api_edit(player_id) -> str:
     resp = Response(status=201, mimetype='application/json')
     return resp
 
