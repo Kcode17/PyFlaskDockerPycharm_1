@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS tblBaseball_Players (
     PRIMARY KEY (`id`)
 );
 
-INSERT INTO tblBaseball_Players VALUES
+INSERT INTO tblBaseball_Players (Name,Team,Position,Height_inches,Weight_lbs,Age) VALUES
     ('Adam Donachie',' "BAL"',' "Catcher"',74,180,22.99),
     ('Paul Bako',' "BAL"',' "Catcher"',74,215,34.69),
     ('Ramon Hernandez',' "BAL"',' "Catcher"',72,210,30.78),
@@ -111,4 +111,5 @@ INSERT INTO tblBaseball_Players VALUES
     ('Chris Resop',' "ANA"',' "Relief Pitcher"',75,222,24.32),
     ('Phil Seibel',' "ANA"',' "Relief Pitcher"',73,195,28.09),
     ('Justin Speier',' "ANA"',' "Relief Pitcher"',76,205,33.31),
-    ('Darren Oliver',' "ANA"',' "Relief Pitcher"',74,220,36.4);
+    ('Darren Oliver',' "ANA"',' "Relief Pitcher"',74,220,36.4),
+    ('Hector Carrasco',' "ANA"',' "Relief Pitcher"',74,220,37.36);
