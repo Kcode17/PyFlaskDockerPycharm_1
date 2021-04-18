@@ -13,6 +13,7 @@ I chose to use Baseball Player Information database for the new application
 ![postman](screenshots/single_view.PNG)
 
 ### Screenshot for new record added to homepage
+New Player Teja record added
 ![postman](screenshots/New_Player_Added.PNG)
 
 ### Screenshot for updated record added to homepage
