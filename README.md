@@ -1,12 +1,27 @@
-# Project Description (Assignment Part-2)
-This project is a homework assignment to setup a Bootstrap HTML template using Flask templates and use it to display data retrieved from database.
+# Project Description (Assignment Part-3)
+This project is a homework assignment to In this project you will need to create HTML forms to create new records, update records, and a small form that 
+has no fields other than a submit button to delete records.
 
-### Screenshot  for Webpage
+I chose to use Baseball Player Information database for the new application
 
-![Webpage_with_db_content](screenshots/web_2.JPG)
+### Screenshot for DB table in Pycharm
+![DB_Table](screenshots/db_pycharm.PNG)
 
-### Screenshot for Postman
-![postman](screenshots/postman_2.JPG)
+### Screenshot for Homepage with Data
+![postman](screenshots/web_3.PNG)
+
+### Screenshot for Single View of a record
+![postman](screenshots/single_view.PNG)
+
+### Screenshot for new record added to homepage
+![postman](screenshots/New_Player_Added.PNG)
+
+### Screenshot for updated record added to homepage
+![postman](screenshots/Name_updated.PNG)
+
+### Screenshot for deleted record (New_Player_Teja) from homepage
+![postman](screenshots/Deleted.PNG)
+
 
 ### Done by
 #### Krishna Teja
