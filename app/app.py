@@ -22,7 +22,7 @@ def index():
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM tblBaseball_Players')
     result = cursor.fetchall()
-    return render_template('index.html', title='Home', user=user, cities=result)
+    return render_template('index.html', title='Home', user=user, players=result)
 
 
 @app.route('/view/<int:player_id>', methods=['GET'])
@@ -30,7 +30,7 @@ def record_view(player_id):
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM tblBaseball_Players WHERE id=%s', player_id)
     result = cursor.fetchall()
-    return render_template('view.html', title='View Form', city=result[0])
+    return render_template('view.html', title='View Form', players=result[0])
 
 
 @app.route('/edit/<int:city_id>', methods=['GET'])
@@ -38,7 +38,7 @@ def form_edit_get(city_id):
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM tblBaseball_Players WHERE id=%s', city_id)
     result = cursor.fetchall()
-    return render_template('edit.html', title='Edit Form', city=result[0])
+    return render_template('edit.html', title='Edit Form', players=result[0])
 
 
 @app.route('/edit/<int:city_id>', methods=['POST'])
