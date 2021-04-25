@@ -1,27 +1,34 @@
 # Project Description (Assignment Part-3)
-This project is a homework assignment to create HTML forms to create new records, view records, update records and delete records.
+This project is to create REST API and use POSTMAN to test the GET, POST, PUT, DELETE request methods.
 
-I chose to use Baseball Player Information database for the new application
+I chose to use Baseball Player Information database for this project.
 
-### Screenshot for DB table in Pycharm
-![DB_Table](screenshots/db_pycharm.PNG)
+### GET - All Records
+![DB_Table](screenshots/SS_1_All_Records.PNG)
 
-### Screenshot for Homepage with Data
-![postman](screenshots/web_3.PNG)
+### GET - One Record
+![postman](screenshots/SS_2_Get_one_record.PNG)
 
-### Screenshot for Single View of a record
-![postman](screenshots/single_view.PNG)
+### POST - New Record
+![postman](screenshots/SS_3_Post_Add_Record.PNG)
 
-### Screenshot for new record added to homepage
-New Player Teja record added
-![postman](screenshots/New_Player_Added.PNG)
+### New Record added
+101 - New Paul Bako record added
+![postman](screenshots/SS_3_Record_Added.PNG)
 
-### Screenshot for updated record added to homepage
-Adam Donachie Name update to Adam Donachie_1
-![postman](screenshots/Name_updated.PNG)
+### PUT - Edit Record
+101 - New Paul Bako age modified to 45
+![postman](screenshots/SS_4_Put.PNG)
 
-### Screenshot for deleted record (New_Player_Teja) from homepage
-![postman](screenshots/Deleted.PNG)
+### Record Edited
+![postman](screenshots/SS_4_Record_Updated.PNG)
+
+### Delete - Record delete
+![postman](screenshots/SS_5_Delete.PNG)
+
+### Record Deleted
+101 - Record Deleted
+![postman](screenshots/SS_5_Delete_Record.PNG)
 
 
 ### Done by
