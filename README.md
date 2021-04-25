@@ -20,7 +20,7 @@ I chose to use Baseball Player Information database for this project.
 101 - New Paul Bako age modified to 45
 ![postman](screenshots/SS_4_Put.PNG)
 
-### Record Edited
+### Record Updated
 ![postman](screenshots/SS_4_Record_Updated.PNG)
 
 ### Delete - Record delete
