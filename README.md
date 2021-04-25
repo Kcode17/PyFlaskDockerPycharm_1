@@ -1,4 +1,4 @@
-# Project Description (Assignment Part-3)
+# Project Description (Assignment Part-4)
 This project is to create REST API and use POSTMAN to test the GET, POST, PUT, DELETE request methods.
 
 I chose to use Baseball Player Information database for this project.
