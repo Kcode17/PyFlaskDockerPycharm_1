@@ -53,12 +53,12 @@ def form_update_post(player_id):
     mysql.get_db().commit()
     return redirect("/", code=302)
 
-@app.route('/cities/new', methods=['GET'])
+@app.route('/bplayers/new', methods=['GET'])
 def form_insert_get():
     return render_template('new.html', title='New Player Form')
 
 
-@app.route('/cities/new', methods=['POST'])
+@app.route('/bplayers/new', methods=['POST'])
 def form_insert_post():
     cursor = mysql.get_db().cursor()
     inputData = (request.form.get('Name'), request.form.get('Team'), request.form.get('Position'),
@@ -78,7 +78,7 @@ def form_delete_post(player_id):
     return redirect("/", code=302)
 
 
-@app.route('/api/v1/cities', methods=['GET'])
+@app.route('/api/v1/bplayers', methods=['GET'])
 def api_browse() -> str:
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM tblBaseball_Players')
@@ -88,7 +88,7 @@ def api_browse() -> str:
     return resp
 
 
-@app.route('/api/v1/cities/<int:player_id>', methods=['GET'])
+@app.route('/api/v1/bplayers/<int:player_id>', methods=['GET'])
 def api_retrieve(player_id) -> str:
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM tblBaseball_Players WHERE id=%s', player_id)
@@ -97,23 +97,43 @@ def api_retrieve(player_id) -> str:
     resp = Response(json_result, status=200, mimetype='application/json')
     return resp
 
-
-@app.route('/api/v1/cities/', methods=['POST'])
-def api_add() -> str:
-    resp = Response(status=201, mimetype='application/json')
-    return resp
-
-
-@app.route('/api/v1/cities/<int:player_id>', methods=['PUT'])
+@app.route('/api/v1/bplayers/<int:player_id>', methods=['PUT'])
 def api_edit(player_id) -> str:
+    cursor = mysql.get_db().cursor()
+    content = request.json
+    inputData = (content['Name'], content['Team'], content['Position'],
+                 content['Height_inches'], content['Weight_lbs'],
+                 content['Age'],player_id)
+    sql_update_query = """UPDATE tblBaseball_Players t SET t.Name = %s, t.Team = %s, t.Position = %s, t.Height_inches = 
+        %s, t.Weight_lbs = %s, t.Age = %s WHERE t.id = %s """
+    cursor.execute(sql_update_query, inputData)
+    mysql.get_db().commit()
+    resp = Response(status=200, mimetype='application/json')
+    return resp
+
+@app.route('/api/v1/bplayers', methods=['POST'])
+def api_add() -> str:
+
+    content = request.json
+
+    cursor = mysql.get_db().cursor()
+    inputData = (content['Name'], content['Team'], content['Position'],
+                 content['Height_inches'], content['Weight_lbs'], content['Age'])
+    sql_insert_query = """INSERT INTO tblBaseball_Players (Name,Team,Position,Height_inches,Weight_lbs,Age) VALUES (%s,%s, %s,%s, %s,%s) """
+    cursor.execute(sql_insert_query, inputData)
+    mysql.get_db().commit()
     resp = Response(status=201, mimetype='application/json')
     return resp
 
-
-@app.route('/api/cities/<int:player_id>', methods=['DELETE'])
+@app.route('/api/v1/bplayers/<int:player_id>', methods=['DELETE'])
 def api_delete(player_id) -> str:
-    resp = Response(status=210, mimetype='application/json')
+    cursor = mysql.get_db().cursor()
+    sql_delete_query = """DELETE FROM tblBaseball_Players WHERE id = %s """
+    cursor.execute(sql_delete_query, player_id)
+    mysql.get_db().commit()
+    resp = Response(status=200, mimetype='application/json')
     return resp
+
 
 
 if __name__ == '__main__':
